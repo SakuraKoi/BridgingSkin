@@ -1,0 +1,8 @@
+name: BridgingSkin
+main: ldcr.BridgingSkin.BridgingSkin
+version: 1.0.0
+author: Ldcr
+commands:
+  bskin:
+    description: Choose your skin.
+    usage: /bskin
