@@ -2,6 +2,7 @@ name: BridgingSkin
 main: ldcr.BridgingSkin.BridgingSkin
 version: 1.0.0
 author: Ldcr
+depend: ["LdcrUtils"]
 commands:
   bskin:
     description: Choose your skin.
