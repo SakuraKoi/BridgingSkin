@@ -7,3 +7,4 @@ commands:
   bskin:
     description: Choose your skin.
     usage: /bskin
+  bskin-edit:

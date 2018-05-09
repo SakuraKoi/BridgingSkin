@@ -53,7 +53,7 @@ public class SkinSelectCommand implements CommandExecutor {
 	final Player p =(Player) sender;
 	final Inventory inv = Bukkit.createInventory(null, 54,"§6§l皮肤库存");
 	final ArrayList<SkinSet> illegalSkins = new ArrayList<SkinSet>();
-	for (final SkinSet skin : BridgingSkin.getSkin(p.getUniqueId().toString()).allSkin) {
+	for (final SkinSet skin : BridgingSkin.getSkin(p.getName(), p.getUniqueId().toString()).allSkin) {
 	    final Material material = Material.getMaterial(skin.material);
 	    if (material==null) {
 		illegalSkins.add(skin);
@@ -65,10 +65,10 @@ public class SkinSelectCommand implements CommandExecutor {
 	    }
 	}
 	if (!illegalSkins.isEmpty()) {
-	    BridgingSkin.getSkin(p.getUniqueId().toString()).allSkin.removeAll(illegalSkins);
+	    BridgingSkin.getSkin(p.getName(), p.getUniqueId().toString()).allSkin.removeAll(illegalSkins);
 	    sender.sendMessage("§6§l[BridgingAnalyzer] §c在你的皮肤库存发现了一些无效物品, 已自动删除.");
 	}
-	for (final SkinSet skin : BridgingSkin.getSkin(p.getUniqueId().toString()).allSkin) {
+	for (final SkinSet skin : BridgingSkin.getSkin(p.getName(), p.getUniqueId().toString()).allSkin) {
 	    Material material = Material.getMaterial(skin.material);
 	    ItemStack stack;
 	    if (material==null) {

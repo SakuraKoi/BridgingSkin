@@ -7,23 +7,27 @@ import ldcr.lib.com.google.gson.annotations.SerializedName;
 public class PlayerSkin {
     @SerializedName("uuid")
     public final String uuid;
+    public String player;
     @SerializedName("currentSelected")
     public SkinSet currentSkin;
     @SerializedName("allSkins")
     public final LinkedHashSet<SkinSet> allSkin;
-    public PlayerSkin(final String uuid, final SkinSet current,final LinkedHashSet<SkinSet> all) {
+    public PlayerSkin(final String player, final String uuid, final SkinSet current,final LinkedHashSet<SkinSet> all) {
 	this.uuid = uuid;
+	this.player = player;
 	currentSkin = current;
 	allSkin = all;
     }
-    public PlayerSkin(final String uuid) {
+    public PlayerSkin(final String player, final String uuid) {
 	this.uuid = uuid;
+	this.player = player;
 	currentSkin = new SkinSet();
 	allSkin = new LinkedHashSet<SkinSet>();
 	allSkin.add(currentSkin);
     }
     public PlayerSkin() {
 	uuid="#NULL";
+	player = "#NULL";
 	currentSkin = new SkinSet();
 	allSkin = new LinkedHashSet<SkinSet>();
 	allSkin.add(currentSkin);

@@ -13,7 +13,7 @@ public class SkinSet {
     }
 
     public SkinSet() {
-	this("SANDSTONE",(byte) 0);
+	this("SANDSTONE",(byte) 2);
     }
 
     @Override
