@@ -1,8 +1,8 @@
 name: BridgingSkin
-main: ldcr.BridgingSkin.BridgingSkin
-version: 1.0.0
-author: Ldcr
-depend: ["LdcrUtils"]
+main: sakura.kooi.BridgingSkin.BridgingSkin
+version: 3
+author: SakuraKooi
+depend: ["BridgingAnalyzer"]
 commands:
   bskin:
     description: Choose your skin.
