@@ -17,15 +17,14 @@ import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-
 import lombok.Cleanup;
 import lombok.Getter;
 import sakura.kooi.BridgingAnalyzer.Utils.Metrics;
 import sakura.kooi.BridgingAnalyzer.api.BridgingAnalyzerAPI;
 import sakura.kooi.BridgingSkin.data.PlayerSkin;
 import sakura.kooi.BridgingSkin.data.SkinSet;
+import sakura.lib.com.google.gson.Gson;
+import sakura.lib.com.google.gson.GsonBuilder;
 
 public class BridgingSkin extends JavaPlugin implements Listener{
 	@Getter private static BridgingSkin instance;
@@ -56,13 +55,13 @@ public class BridgingSkin extends JavaPlugin implements Listener{
 			return null;
 		}
 	}
+
 	protected static File rootDir;
 	@Override
 	public void onEnable() {
 		instance = this;
 		final Metrics metrics = new Metrics(this);
 		metrics.addCustomChart(new Metrics.SimplePie("distributeversion", () -> "Public-Bilibili-Final"));
-		sakura.kooi.BridgingSkin.Metrics.doCheck();
 		rootDir = new File("plugins" + File.separator + "BridgingSkin"+File.separator+"skins");
 		if (!rootDir.exists()) {
 			rootDir.mkdirs();

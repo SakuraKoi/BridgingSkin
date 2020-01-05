@@ -4,5 +4,6 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Spigot1.8.8"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/BridgingAnalyzer"/>
+	<classpathentry exported="true" kind="lib" path="libs/gson-2.8.5-repackage.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
