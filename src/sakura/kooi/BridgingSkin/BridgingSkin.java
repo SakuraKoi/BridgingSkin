@@ -19,7 +19,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import lombok.Cleanup;
 import lombok.Getter;
-import sakura.kooi.BridgingAnalyzer.Utils.Metrics;
+import sakura.kooi.BridgingAnalyzer.utils.Metrics;
 import sakura.kooi.BridgingAnalyzer.api.BridgingAnalyzerAPI;
 import sakura.kooi.BridgingSkin.data.PlayerSkin;
 import sakura.kooi.BridgingSkin.data.SkinSet;
